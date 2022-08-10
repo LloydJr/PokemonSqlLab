@@ -2,4 +2,7 @@
 
 mysql> SELECT tr.trainername, p.name, pt.pokelevel, p.primary_type, p.secondary_type FROM types AS t JOIN pokemons
 AS p ON p.primary_type = t.id JOIN pokemon_trainer AS pt ON p.id = pt.pokemon_id JOIN trainers
-AS tr ON pt.trainerID = tr.trainerID ORDER BY pokelevel DESC;
+AS tr ON pt.trainerID = tr.trainerID ORDER BY attack & spatk DESC;
+
+"Why I choose to order by attack and spatk? I decided that the strongest Pokemon would have the highest attack and spatk stats.
+If I were to do them by level, it would not determine which level 100 would be the strongest."
