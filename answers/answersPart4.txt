@@ -1,0 +1,3 @@
+### Part 4: Final Report
+
+mysql> SELECT tr.trainername, p.name, pt.pokelevel, t.name, p.secondary_type FROM types AS t RIGHT JOIN pokemons AS p ON p.primary_type = t.id JOIN pokemon_trainer AS pt ON p.id = pt.trainerID JOIN trainers AS tr ON pt.trainerID = tr.trainerID ORDER BY pokelevel DESC;
